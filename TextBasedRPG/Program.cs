@@ -34,6 +34,11 @@ static void RoomLoader(string switchKey)
                 Inventory.DrawInventory();
                 break;
             }
+        case "test":
+            {
+                Screens.test();
+                break;
+            }
     }
 }
 
@@ -45,7 +50,5 @@ while (Screens.roomString != "end-loop")
     }
     while (Screens.roomString != "");
 }
-
-
 
 Console.ReadKey();
