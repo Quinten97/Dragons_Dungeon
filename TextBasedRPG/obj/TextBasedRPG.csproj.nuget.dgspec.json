@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\TextBasedRPG\\TextBasedRPG.csproj": {}
+    "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\TextBasedRPG\\TextBasedRPG.csproj": {
+    "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\TextBasedRPG\\TextBasedRPG.csproj",
+        "projectUniqueName": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
         "projectName": "TextBasedRPG",
-        "projectPath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\TextBasedRPG\\TextBasedRPG.csproj",
+        "projectPath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
         "packagesPath": "C:\\Users\\admin.quinten\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\TextBasedRPG\\obj\\",
+        "outputPath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin.quinten\\AppData\\Roaming\\NuGet\\NuGet.Config",
