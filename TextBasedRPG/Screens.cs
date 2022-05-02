@@ -241,26 +241,30 @@ namespace TextBasedRPG
             Console.SetCursorPosition(1, 27);
             Console.WriteLine("|____________________________________________________________________________________________________________________|");
 
-            while (true)
+            bool breakLoop = true;
+
+            while (breakLoop == true)
             {
                 Console.SetCursorPosition(54, 12);
                 string tempString = Console.ReadLine();
 
-                if (tempString.Length <= 16)
-                {
-                    Player.playerName = tempString;
-                    roomString = "cutscene-one";
-                    break;
-                }
-                if (tempString.Length <= 0)
+
+                if (tempString.Length <= 0 || tempString == null)
                 {
                     nameTooLong = "The name you enter must be at least one character...";
                     PlayerNameScreen();
                 }
-                else
+                if (tempString.Length > 16)
                 {
                     nameTooLong = "The name you enter must be less than 16 characters...";
                     PlayerNameScreen();
+                }
+                else
+                {
+                    Console.WriteLine("made it");
+                    Player.playerName = tempString;
+                    roomString = "cutscene-one";
+                    breakLoop = false;
                 }
             } 
         } //End of PlayerNameScreen()
@@ -356,5 +360,118 @@ namespace TextBasedRPG
             while (loopExit == true);
 
         }// end of RoomOneA()
+
+        public static void test()
+        {
+            Console.Clear();
+            roomString = "";
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(20, 5);
+            Console.WriteLine("██████████");
+            Console.SetCursorPosition(18, 6);
+            Console.WriteLine("██          ██");
+            Console.SetCursorPosition(16, 7);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(16, 8);
+            Console.WriteLine("██    ████  ██  ██");
+            Console.SetCursorPosition(16, 9);
+            Console.WriteLine("██    ████  ██  ██");
+            Console.SetCursorPosition(16, 10);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(16, 11);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(16, 12);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(16, 13);
+            Console.WriteLine("████████████████████");
+            Console.SetCursorPosition(14, 14);
+            Console.WriteLine("██                  ██");
+            Console.SetCursorPosition(14, 15);
+            Console.WriteLine("██                  ██");
+            Console.SetCursorPosition(14, 16);
+            Console.WriteLine("██                  ██");
+            Console.SetCursorPosition(14, 17);
+            Console.WriteLine("██                  ██");
+            Console.SetCursorPosition(14, 18);
+            Console.WriteLine("██                  ██");
+            Console.SetCursorPosition(16, 19);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(16, 20);
+            Console.WriteLine("██            ██");
+            Console.SetCursorPosition(14, 21);
+            Console.WriteLine("██                ██");
+            Console.SetCursorPosition(16, 22);
+            Console.WriteLine("████████████████");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.SetCursorPosition(20, 6);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(18, 7);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(18, 8);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(18, 9);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(18, 10);
+            Console.WriteLine("████");
+            Console.SetCursorPosition(18, 11);
+            Console.WriteLine("██████      ██");
+            Console.SetCursorPosition(18, 12);
+            Console.WriteLine("██████      ██");
+            Console.SetCursorPosition(18, 13);
+            Console.WriteLine("████        ██");
+            Console.SetCursorPosition(16, 14);
+            Console.WriteLine("████            ██");
+            Console.SetCursorPosition(16, 15);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(16, 16);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(16, 17);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(16, 18);
+            Console.WriteLine("██              ██");
+            Console.SetCursorPosition(18, 20);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(16, 21);
+            Console.WriteLine("████");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.SetCursorPosition(22, 6);
+            Console.WriteLine("████████");
+            Console.SetCursorPosition(26, 7);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(26, 8);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(26, 9);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(22, 10);
+            Console.WriteLine("██████████");
+            Console.SetCursorPosition(24, 12);
+            Console.WriteLine("██████");
+            Console.SetCursorPosition(22, 13);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(20, 14);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(20, 15);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(20, 16);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(20, 17);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(20, 18);
+            Console.WriteLine("██");
+            Console.SetCursorPosition(18, 19);
+            Console.WriteLine("██████      ██");
+            Console.SetCursorPosition(20, 20);
+            Console.WriteLine("██  ████");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.SetCursorPosition(24, 11);
+            Console.WriteLine("██████"); 
+            Console.SetCursorPosition(20, 21);
+            Console.WriteLine("██████  ████");
+
+
+
+
+        }
     }
 }

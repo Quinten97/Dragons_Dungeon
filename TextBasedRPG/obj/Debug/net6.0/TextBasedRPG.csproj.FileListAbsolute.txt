@@ -13,3 +13,18 @@ C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\TextBasedRPG\obj\Debug
 C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.pdb
 C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.genruntimeconfig.cache
 C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\TextBasedRPG\obj\Debug\net6.0\ref\TextBasedRPG.dll
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.exe
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.deps.json
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.runtimeconfig.json
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.dll
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.pdb
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.csproj.AssemblyReference.cache
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.GeneratedMSBuildEditorConfig.editorconfig
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.AssemblyInfoInputs.cache
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.AssemblyInfo.cs
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.csproj.CoreCompileInputs.cache
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.dll
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\refint\TextBasedRPG.dll
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.pdb
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.genruntimeconfig.cache
+D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\ref\TextBasedRPG.dll
