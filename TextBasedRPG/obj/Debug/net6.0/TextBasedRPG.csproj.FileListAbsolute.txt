@@ -28,3 +28,18 @@ D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\n
 D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.pdb
 D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.genruntimeconfig.cache
 D:\Web Development\Philly assesment\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\ref\TextBasedRPG.dll
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.exe
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.deps.json
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.runtimeconfig.json
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.dll
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\bin\Debug\net6.0\TextBasedRPG.pdb
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.csproj.AssemblyReference.cache
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.AssemblyInfoInputs.cache
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.AssemblyInfo.cs
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.csproj.CoreCompileInputs.cache
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.dll
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\refint\TextBasedRPG.dll
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.pdb
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\TextBasedRPG.genruntimeconfig.cache
+C:\Users\admin.quinten\Documents\C# Projects\TextBasedRPG\unamedTextBasedGame\TextBasedRPG\obj\Debug\net6.0\ref\TextBasedRPG.dll

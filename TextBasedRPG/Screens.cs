@@ -326,6 +326,8 @@ namespace TextBasedRPG
             while (loopExit == true);
         }// end of CutSceneOne()
 
+        public static bool RoomOneAItem = true;
+
         public static void RoomOneA()
         {
             Console.Clear();
@@ -333,6 +335,7 @@ namespace TextBasedRPG
             roomString = "";
 
             Functions.DrawUI();
+
 
             ConsoleKeyInfo keyInfo;
 
@@ -344,9 +347,12 @@ namespace TextBasedRPG
 
                 switch (keyInfo.Key)
                 {
-                    case ConsoleKey.E:
+                    case ConsoleKey.S:
                         {
-                            Environment.Exit(-1);
+                          //  if (RoomOneAItem == true)
+                          //  {
+                           //     Functions.addItemToInventory(Items.heathPotion);
+                         //  }
                             break;
                         }
                     case ConsoleKey.I:

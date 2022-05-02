@@ -32,6 +32,8 @@ namespace TextBasedRPG
             Console.SetCursorPosition(1, 24);
             Console.WriteLine("|                                      |_____________________________________________________________________________");
 
+            Console.SetCursorPosition(60, 5);
+
             Console.SetCursorPosition(42, 26);
             Console.WriteLine("(A)ctivate item");
             Console.SetCursorPosition(54, 26);

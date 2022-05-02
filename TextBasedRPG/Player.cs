@@ -50,10 +50,15 @@ namespace TextBasedRPG
         public static int bleedDamage;
 
 
-        public static string[] items = { };
+        public static object[][] consumables = new object[][] { };
+        public static object[][] inventoryWeapons = new object[][] { };
+        public static object[][] inventoryArmor = new object[][] { };
+        public static object[] keys = {};
 
 
-//---------------------------------------------------------------------------------------------------------------
+
+
+        //---------------------------------------------------------------------------------------------------------------
 
         //Get stats from equiped armor
         public static int HpFromArmor()
