@@ -8,6 +8,6 @@ namespace TextBasedRPG
 {
     internal class Items
     {
-        public static object[] heathPotion = {"Health Potion", .25, 0 };
+        public static List<object> heathPotion = new List<object> {"Health Potion", .25, 0 };
     }
 }

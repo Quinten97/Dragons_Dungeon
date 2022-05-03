@@ -164,6 +164,8 @@ namespace TextBasedRPG
                             Player.CalculateTotals();
                             Player.currentHp = Player.maxHp;
                             Player.currentMana = Player.maxMana;
+                            Player.inventoryArmor.AddRange(Armor.barbarianArmor);
+                            Player.inventoryWeapons.AddRange(Weapons.battleAxe);
                             roomString = "player-name-screen";
                             loopExit = true;
                             break;

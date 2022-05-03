@@ -33,10 +33,13 @@ namespace TextBasedRPG
             Console.WriteLine("|                                      |_____________________________________________________________________________");
 
             Console.SetCursorPosition(60, 5);
+            Console.WriteLine("Weapons");
+            Console.SetCursorPosition(60, 6);
+            Console.WriteLine(Player.inventoryWeapons[9]);
 
             Console.SetCursorPosition(42, 26);
             Console.WriteLine("(A)ctivate item");
-            Console.SetCursorPosition(54, 26);
+            Console.SetCursorPosition(60, 26);
             Console.WriteLine("(E)quip");
             Console.SetCursorPosition(62, 26);
             Console.WriteLine("(U)nequip");

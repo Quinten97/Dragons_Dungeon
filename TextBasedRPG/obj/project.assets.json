@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\admin.quinten\\.nuget\\packages\\": {}
+    "C:\\Users\\quint\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
+      "projectUniqueName": "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
       "projectName": "TextBasedRPG",
-      "projectPath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
-      "packagesPath": "C:\\Users\\admin.quinten\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\obj\\",
+      "projectPath": "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
+      "packagesPath": "C:\\Users\\quint\\.nuget\\packages\\",
+      "outputPath": "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin.quinten\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\quint\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

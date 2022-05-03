@@ -10,11 +10,11 @@ namespace TextBasedRPG
     {
         public static string playerName;
 
-        // Armor Sets hpBonus, manaBonus, armorBonus, magRes, firRes, iceRes, ligRes, bleRes
-        public static object[] equipedArmor = { 0, 0, 0, 0, 0, 0, 0, 0 };
+        // Armor Sets hpBonus, manaBonus, armorBonus, magRes, firRes, iceRes, ligRes, bleRes, Name
+        public static List<object> equipedArmor = new List<object> { 0, 0, 0, 0, 0, 0, 0, 0, "" };
 
-        // Weapons baseDamage,strRequirement, magRequirement, dexRequirement, magDmg, firDmg, iceDmg, ligDmg, bleDmg
-        public static object[] equipedWeapon = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        // Weapons baseDamage,strRequirement, magRequirement, dexRequirement, magDmg, firDmg, iceDmg, ligDmg, bleDmg, Name
+        public static List<object> equipedWeapon = new List<object> { 0, 0, 0, 0, 0, 0, 0, 0, 0, "" };
 
         public static int baseHp;
         public static int hpBonus;
@@ -50,10 +50,10 @@ namespace TextBasedRPG
         public static int bleedDamage;
 
 
-        public static object[][] consumables = new object[][] { };
-        public static object[][] inventoryWeapons = new object[][] { };
-        public static object[][] inventoryArmor = new object[][] { };
-        public static object[] keys = {};
+        public static List<object> consumables = new List<object>();
+        public static List<object> inventoryWeapons = new List<object>();
+        public static List<object> inventoryArmor = new List<object>();
+        public static List<object> keys = new List<object>();
 
 
 
@@ -63,43 +63,43 @@ namespace TextBasedRPG
         //Get stats from equiped armor
         public static int HpFromArmor()
         {
-            Int32.TryParse(equipedArmor[0].ToString(), out int armorInt);
-            return armorInt;
+            int weaponInt = (int)equipedArmor[0];
+            return weaponInt;
         }
         public static int ManaFromArmor()
         {
-            Int32.TryParse(equipedArmor[1].ToString(), out int armorInt);
-            return armorInt;
+            int weaponInt = (int)equipedArmor[1];
+            return weaponInt;
         }
         public static int armor()
         {
-            Int32.TryParse(equipedArmor[2].ToString(), out int armorInt);
-            return armorInt;
+            int weaponInt = (int)equipedArmor[2];
+            return weaponInt;
         }
         public static int MagicFromArmor()
         {
-            Int32.TryParse(equipedArmor[3].ToString(), out int armorInt);
-            return armorInt;
+            int weaponInt = (int)equipedArmor[3];
+            return weaponInt;
         }
         public static int FireFromArmor()
         {
-            Int32.TryParse(equipedArmor[4].ToString(), out int armorInt);
-            return armorInt;
+            int weaponInt = (int)equipedArmor[4];
+            return weaponInt;
         }
         public static int IceFromArmor()
         {
-            Int32.TryParse(equipedArmor[5].ToString(), out int armorInt);
-            return armorInt;
+            int weaponInt = (int)equipedArmor[5];
+            return weaponInt;
         }
         public static int LightningFromArmor()
         {
-            Int32.TryParse(equipedArmor[6].ToString(), out int armorInt);
-            return armorInt;
+            int weaponInt = (int)equipedArmor[6];
+            return weaponInt;
         }
         public static int BleedFromArmor()
         {
-            Int32.TryParse(equipedArmor[7].ToString(), out int armorInt);
-            return armorInt;
+            int weaponInt = (int)equipedArmor[7];
+            return weaponInt;
         }
 
         //---------------------------------------------------------------------------------------------------------------
@@ -110,48 +110,48 @@ namespace TextBasedRPG
         //Get stats from equiped weapon
         public static int PhyDmgWeapon()
         {
-            Int32.TryParse(equipedArmor[0].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[0];
+            return weaponInt;
         }
         public static int StrReqWeapon()
         {
-            Int32.TryParse(equipedArmor[1].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[1];
+            return weaponInt;
         }
         public static int MagReqWeapon()
         {
-            Int32.TryParse(equipedArmor[2].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[2];
+            return weaponInt;
         }
         public static int DexReqWeapon()
         {
-            Int32.TryParse(equipedArmor[3].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[3];
+            return weaponInt;
         }
         public static int MagDmgWeapon()
         {
-            Int32.TryParse(equipedArmor[4].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[4];
+            return weaponInt;
         }
         public static int FirDmgWeapon()
         {
-            Int32.TryParse(equipedArmor[5].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[5];
+            return weaponInt;
         }
         public static int IceDmgWeapon()
         {
-            Int32.TryParse(equipedArmor[6].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[6];
+            return weaponInt;
         }
         public static int LigDmgWeapon()
         {
-            Int32.TryParse(equipedArmor[7].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[7];
+            return weaponInt;
         }
         public static int BleDmgWeapon()
         {
-            Int32.TryParse(equipedArmor[7].ToString(), out int weaponint);
-            return weaponint;
+            int weaponInt = (int)equipedWeapon[8];
+            return weaponInt;
         }
 
         //---------------------------------------------------------------------------------------------------------------
@@ -194,21 +194,23 @@ namespace TextBasedRPG
             lightningDamage = LigDmgWeapon();
             bleedDamage = BleDmgWeapon();
         }
-        public static void EquipArmor(object[] selectedArmor)
+        public static void EquipArmor(dynamic selectedArmor)
         {
-            object[] equipedArmor = selectedArmor;
+            equipedArmor.Clear();
+            equipedArmor.AddRange(selectedArmor);
         }
         public static void UnEquipArmor()
         {
-            object[] equipedArmor = { 0, 0, 0, 0, 0, 0, 0, 0 };
+            equipedArmor.Clear();
         }
-        public static void EquipWeapon(object[] selectedWeapon)
+        public static void EquipWeapon(dynamic selectedWeapon)
         {
-            object[] equipedWeapon = selectedWeapon;
+            equipedWeapon.Clear();
+            equipedWeapon.AddRange(selectedWeapon);
         }
         public static void UnEquipWeapon()
         {
-            object[] equipedWeapon = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            equipedWeapon.Clear();
         }
         public static void CalculateTotals()
         {
