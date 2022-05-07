@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj": {}
+    "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj": {}
   },
   "projects": {
-    "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj": {
+    "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
+        "projectUniqueName": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
         "projectName": "TextBasedRPG",
-        "projectPath": "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
-        "packagesPath": "C:\\Users\\quint\\.nuget\\packages\\",
-        "outputPath": "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\obj\\",
+        "projectPath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
+        "packagesPath": "C:\\Users\\admin.quinten\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\quint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin.quinten\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Windows.Extensions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

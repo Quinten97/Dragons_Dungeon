@@ -1,7 +1,10 @@
 ﻿using TextBasedRPG;
+using System.Media;
 
 static void RoomLoader(string switchKey)
 {
+
+
     switch (switchKey)
     {
         case "title-screen":
@@ -34,9 +37,9 @@ static void RoomLoader(string switchKey)
                 Inventory.DrawInventory();
                 break;
             }
-        case "test":
+        case "combat":
             {
-                Screens.test();
+                Combat.CombatRoom();
                 break;
             }
     }
@@ -44,6 +47,12 @@ static void RoomLoader(string switchKey)
 
 while (Screens.roomString != "end-loop")
 {
+    if (OperatingSystem.IsWindows())
+    {
+        SoundPlayer gameMusic = new SoundPlayer("C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\GameMusic.wav");
+        gameMusic.Load();
+        gameMusic.PlayLooping();
+    }
     do
     {
         RoomLoader(Screens.roomString);

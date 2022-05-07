@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "XNvRDHZqrnY7RYYggA/pLw45bXutFQlK/4DsupGzly+yJJYm0iI2K3Tp08pfDnrcjpOQEFZrAdRQorO6VY87XQ==",
+  "dgSpecHash": "jhBWoQv7SLCGeHFWUL2UzDD+2tFb859upyU+I1oQgq5ItcPtP2NxTUOBpbsJ1caCFzLuhIjzeBK1YSjxfIdWXw==",
   "success": true,
-  "projectFilePath": "D:\\Web Development\\Philly assesment\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\TextBasedRPG.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin.quinten\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\admin.quinten\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\admin.quinten\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

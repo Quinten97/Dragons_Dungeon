@@ -11,10 +11,10 @@ namespace TextBasedRPG
         public static string playerName;
 
         // Armor Sets hpBonus, manaBonus, armorBonus, magRes, firRes, iceRes, ligRes, bleRes, Name
-        public static List<object> equipedArmor = new List<object> { 0, 0, 0, 0, 0, 0, 0, 0, "" };
+        public static List<object> equipedArmor = new List<object>();
 
         // Weapons baseDamage,strRequirement, magRequirement, dexRequirement, magDmg, firDmg, iceDmg, ligDmg, bleDmg, Name
-        public static List<object> equipedWeapon = new List<object> { 0, 0, 0, 0, 0, 0, 0, 0, 0, "" };
+        public static List<object> equipedWeapon = new List<object>();
 
         public static int baseHp;
         public static int hpBonus;
@@ -50,10 +50,10 @@ namespace TextBasedRPG
         public static int bleedDamage;
 
 
-        public static List<object> consumables = new List<object>();
-        public static List<object> inventoryWeapons = new List<object>();
-        public static List<object> inventoryArmor = new List<object>();
-        public static List<object> keys = new List<object>();
+        public static List<List <object>> consumables = new List<List <object>>();
+        public static List<List <object>> inventoryWeapons = new List<List <object>>();
+        public static List<List <object>> inventoryArmor = new List<List <object>>();
+        public static List<List <object>> keys = new List<List <object>>();
 
 
 
@@ -193,24 +193,6 @@ namespace TextBasedRPG
             iceDamage = IceDmgWeapon();
             lightningDamage = LigDmgWeapon();
             bleedDamage = BleDmgWeapon();
-        }
-        public static void EquipArmor(dynamic selectedArmor)
-        {
-            equipedArmor.Clear();
-            equipedArmor.AddRange(selectedArmor);
-        }
-        public static void UnEquipArmor()
-        {
-            equipedArmor.Clear();
-        }
-        public static void EquipWeapon(dynamic selectedWeapon)
-        {
-            equipedWeapon.Clear();
-            equipedWeapon.AddRange(selectedWeapon);
-        }
-        public static void UnEquipWeapon()
-        {
-            equipedWeapon.Clear();
         }
         public static void CalculateTotals()
         {

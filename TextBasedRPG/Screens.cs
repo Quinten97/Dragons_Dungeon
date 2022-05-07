@@ -157,15 +157,13 @@ namespace TextBasedRPG
                     case ConsoleKey.B:
                         {
                             Player.InitializeStats(25, 10, 3, 1, 2);
-                            Player.EquipArmor(Armor.barbarianArmor);
-                            Player.InitializeArmorStats();
-                            Player.EquipWeapon(Weapons.battleAxe);
-                            Player.InitializeWeaponStats();
-                            Player.CalculateTotals();
+                            Armor.EquipArmor(Armor.barbarianArmor);
+                            Weapons.EquipWeapon(Weapons.battleAxe);
                             Player.currentHp = Player.maxHp;
                             Player.currentMana = Player.maxMana;
-                            Player.inventoryArmor.AddRange(Armor.barbarianArmor);
-                            Player.inventoryWeapons.AddRange(Weapons.battleAxe);
+                            Player.inventoryArmor.Add(Armor.barbarianArmor);
+                            Player.inventoryArmor.Add(Armor.mageArmor);
+                            Player.inventoryWeapons.Add(Weapons.battleAxe);
                             roomString = "player-name-screen";
                             loopExit = true;
                             break;
@@ -173,13 +171,12 @@ namespace TextBasedRPG
                     case ConsoleKey.M:
                         {
                             Player.InitializeStats(12, 25, 1, 3, 2);
-                            Player.EquipArmor(Armor.mageArmor);
-                            Player.InitializeArmorStats();
-                            Player.EquipWeapon(Weapons.mageStaff);
-                            Player.InitializeWeaponStats();
-                            Player.CalculateTotals();
+                            Armor.EquipArmor(Armor.mageArmor);
+                            Weapons.EquipWeapon(Weapons.mageStaff);
                             Player.currentHp = Player.maxHp;
                             Player.currentMana = Player.maxMana;
+                            Player.inventoryArmor.Add(Armor.mageArmor);
+                            Player.inventoryWeapons.Add(Weapons.mageStaff);
                             roomString = "player-name-screen";
                             loopExit = true;
                             break;
@@ -187,13 +184,12 @@ namespace TextBasedRPG
                     case ConsoleKey.R:
                         {
                             Player.InitializeStats(15, 15, 1, 2, 3);
-                            Player.EquipArmor(Armor.rougeArmor);
-                            Player.InitializeArmorStats();
-                            Player.EquipWeapon(Weapons.twinDaggers);
-                            Player.InitializeWeaponStats();
-                            Player.CalculateTotals();
+                            Armor.EquipArmor(Armor.rougeArmor);
+                            Weapons.EquipWeapon(Weapons.twinDaggers);
                             Player.currentHp = Player.maxHp;
                             Player.currentMana = Player.maxMana;
+                            Player.inventoryArmor.Add(Armor.rougeArmor);
+                            Player.inventoryWeapons.Add(Weapons.twinDaggers);
                             roomString = "player-name-screen";
                             loopExit = true;
                             break;
@@ -290,8 +286,6 @@ namespace TextBasedRPG
             }
             Console.SetCursorPosition(95, 26);
             Console.WriteLine("(C)ontinue");
-            Console.SetCursorPosition(110, 26);
-            Console.WriteLine("(E)xit");
             Console.SetCursorPosition(1, 27);
             Console.WriteLine("|____________________________________________________________________________________________________________________|");
 
@@ -312,11 +306,6 @@ namespace TextBasedRPG
 
                 switch (keyInfo.Key)
                 {
-                    case ConsoleKey.E:
-                        {
-                            Environment.Exit(-1);
-                            break;
-                        }
                     case ConsoleKey.C:
                         {
                             roomString = "room-1-A";
@@ -337,6 +326,10 @@ namespace TextBasedRPG
             roomString = "";
 
             Functions.DrawUI();
+            Console.SetCursorPosition(10, 5);
+            Console.WriteLine("(S)earch Room");
+            Console.SetCursorPosition(20, 5);
+            Console.WriteLine("(F)ight");
 
 
             ConsoleKeyInfo keyInfo;
@@ -351,10 +344,27 @@ namespace TextBasedRPG
                 {
                     case ConsoleKey.S:
                         {
-                          //  if (RoomOneAItem == true)
-                          //  {
-                           //     Functions.addItemToInventory(Items.heathPotion);
-                         //  }
+                            if (RoomOneAItem == true)
+                            {
+                                Console.SetCursorPosition(20, 10);
+                                Console.WriteLine("You found a health potion");
+                                Player.consumables.Add(Items.healthPotion);
+                                Player.keys.Add(Keys.Key1);
+                                Items.healthPotion[3] =+ 1;
+                                RoomOneAItem = false;
+                            }
+                            else
+                            {
+                                Console.SetCursorPosition(20, 10);
+                                Console.WriteLine("you find nothing else in this room");
+                            }
+                            break;
+                        }
+                    case ConsoleKey.F:
+                        {
+                            Combat.selectEnemy(Enemies.orc);
+                            roomString = "combat";
+                            loopExit = false;
                             break;
                         }
                     case ConsoleKey.I:
@@ -363,123 +373,15 @@ namespace TextBasedRPG
                             loopExit=false;
                             break;
                         }
+                    case ConsoleKey.E:
+                        {
+                            Environment.Exit(-1);
+                            break;
+                        }
                 }
             }
             while (loopExit == true);
 
         }// end of RoomOneA()
-
-        public static void test()
-        {
-            Console.Clear();
-            roomString = "";
-
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.SetCursorPosition(20, 5);
-            Console.WriteLine("██████████");
-            Console.SetCursorPosition(18, 6);
-            Console.WriteLine("██          ██");
-            Console.SetCursorPosition(16, 7);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(16, 8);
-            Console.WriteLine("██    ████  ██  ██");
-            Console.SetCursorPosition(16, 9);
-            Console.WriteLine("██    ████  ██  ██");
-            Console.SetCursorPosition(16, 10);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(16, 11);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(16, 12);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(16, 13);
-            Console.WriteLine("████████████████████");
-            Console.SetCursorPosition(14, 14);
-            Console.WriteLine("██                  ██");
-            Console.SetCursorPosition(14, 15);
-            Console.WriteLine("██                  ██");
-            Console.SetCursorPosition(14, 16);
-            Console.WriteLine("██                  ██");
-            Console.SetCursorPosition(14, 17);
-            Console.WriteLine("██                  ██");
-            Console.SetCursorPosition(14, 18);
-            Console.WriteLine("██                  ██");
-            Console.SetCursorPosition(16, 19);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(16, 20);
-            Console.WriteLine("██            ██");
-            Console.SetCursorPosition(14, 21);
-            Console.WriteLine("██                ██");
-            Console.SetCursorPosition(16, 22);
-            Console.WriteLine("████████████████");
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.SetCursorPosition(20, 6);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(18, 7);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(18, 8);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(18, 9);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(18, 10);
-            Console.WriteLine("████");
-            Console.SetCursorPosition(18, 11);
-            Console.WriteLine("██████      ██");
-            Console.SetCursorPosition(18, 12);
-            Console.WriteLine("██████      ██");
-            Console.SetCursorPosition(18, 13);
-            Console.WriteLine("████        ██");
-            Console.SetCursorPosition(16, 14);
-            Console.WriteLine("████            ██");
-            Console.SetCursorPosition(16, 15);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(16, 16);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(16, 17);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(16, 18);
-            Console.WriteLine("██              ██");
-            Console.SetCursorPosition(18, 20);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(16, 21);
-            Console.WriteLine("████");
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.SetCursorPosition(22, 6);
-            Console.WriteLine("████████");
-            Console.SetCursorPosition(26, 7);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(26, 8);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(26, 9);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(22, 10);
-            Console.WriteLine("██████████");
-            Console.SetCursorPosition(24, 12);
-            Console.WriteLine("██████");
-            Console.SetCursorPosition(22, 13);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(20, 14);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(20, 15);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(20, 16);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(20, 17);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(20, 18);
-            Console.WriteLine("██");
-            Console.SetCursorPosition(18, 19);
-            Console.WriteLine("██████      ██");
-            Console.SetCursorPosition(20, 20);
-            Console.WriteLine("██  ████");
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.SetCursorPosition(24, 11);
-            Console.WriteLine("██████"); 
-            Console.SetCursorPosition(20, 21);
-            Console.WriteLine("██████  ████");
-
-
-
-
-        }
     }
 }
