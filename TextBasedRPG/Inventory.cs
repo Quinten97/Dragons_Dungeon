@@ -311,9 +311,10 @@ namespace TextBasedRPG
                         }
                     case ConsoleKey.C:
                         {
-                            Screens.roomString = Screens.savedRoomString;
-                            loopBreak = false;
-                            break;
+                                Screens.roomString = Screens.savedRoomString;
+                                loopBreak = false;
+                            Combat.loopBreak = true;
+                                break;
                         }
                 }
 

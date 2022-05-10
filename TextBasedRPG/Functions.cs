@@ -44,11 +44,43 @@ namespace TextBasedRPG
 
         }
 
+        public static void DrawEnemys(string enemyName)
+        {
+            Console.SetCursorPosition(80,1);
+            Console.WriteLine("--------------------------------");
+            Console.SetCursorPosition(80,18);
+            Console.WriteLine("--------------------------------");
+
+            int index = 2;
+            while (index < 18) 
+            {
+                Console.SetCursorPosition(79, index);
+                Console.WriteLine("|");
+                Console.SetCursorPosition(112, index);
+                Console.WriteLine("|");
+                index++;
+            }
+            Console.SetCursorPosition(82, 19);
+            Console.WriteLine(Combat.currentEnemy[0]);
+            switch (enemyName)
+            {
+                case "kobold":
+                    {
+                        break;
+                    }
+            }
+        }
+
         //Save current roomString for drawing of submenus, EX: Inventory
 
         public static void saveRoomString()
         {
             Screens.savedRoomString = Screens.roomString;
+        }
+
+        public static void combatSaveRoomString()
+        {
+            Screens.combatSaveRoomString = Screens.roomString;
         }
     }
 }

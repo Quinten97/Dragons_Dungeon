@@ -14,7 +14,7 @@ namespace TextBasedRPG
          * ligDmg, bleDmg */
 
         public static List<object> orc = new List<object> {
-            /*Name 0*/ "ogre",
+            /*Name 0*/ "kobold",
             /*HP 1*/ 25, 
             /*MP 2*/ 10, 
             /*Armor 3*/ 3, 
@@ -25,10 +25,12 @@ namespace TextBasedRPG
             /*bleRes 8*/ -1,
             /*Dmg 9*/ 4,
             /*magDmg 10*/ 0,
-            /*firDmg 11*/ 0,
+            /*firDmg 11*/ 3,
             /*iceDmg 12*/ 0,
             /*ligDmg 13*/ 0,
-            /*bleDmg 14*/ 0
+            /*bleDmg 14*/ 0,
+            /*Magic Name 15*/ "Fire Breath",
+            /*MP Cost 16*/ 2
         };
     }
 }

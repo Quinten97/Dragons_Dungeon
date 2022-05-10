@@ -11,6 +11,7 @@ namespace TextBasedRPG
 
         public static string roomString = "title-screen";
         public static string savedRoomString = "";
+        public static string combatSaveRoomString = "";
 
         public static void TitleScreen()
         {
@@ -322,13 +323,14 @@ namespace TextBasedRPG
         public static void RoomOneA()
         {
             Console.Clear();
+            Functions.combatSaveRoomString();
             Functions.saveRoomString();
             roomString = "";
 
             Functions.DrawUI();
             Console.SetCursorPosition(10, 5);
             Console.WriteLine("(S)earch Room");
-            Console.SetCursorPosition(20, 5);
+            Console.SetCursorPosition(20, 6);
             Console.WriteLine("(F)ight");
 
 
@@ -364,6 +366,7 @@ namespace TextBasedRPG
                         {
                             Combat.selectEnemy(Enemies.orc);
                             roomString = "combat";
+                            Screens.savedRoomString = "combat";
                             loopExit = false;
                             break;
                         }
