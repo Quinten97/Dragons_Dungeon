@@ -32,6 +32,11 @@ static void RoomLoader(string switchKey)
                 Screens.RoomOneA();
                 break;
             }
+        case "room-2-A":
+            {
+                Screens.RoomTwoA();
+                break;
+            }
         case "inventory":
             {
                 Inventory.DrawInventory();
@@ -47,12 +52,12 @@ static void RoomLoader(string switchKey)
 
 while (Screens.roomString != "end-loop")
 {
-    if (OperatingSystem.IsWindows())
-    {
-        SoundPlayer gameMusic = new SoundPlayer("C:\\Users\\admin.quinten\\Documents\\C# Projects\\TextBasedRPG\\unamedTextBasedGame\\TextBasedRPG\\GameMusic.wav");
-        gameMusic.Load();
-        gameMusic.PlayLooping();
-    }
+    //if (operatingsystem.iswindows())
+    //{
+    //    soundplayer gamemusic = new soundplayer("c:\\users\\admin.quinten\\documents\\c# projects\\textbasedrpg\\unamedtextbasedgame\\textbasedrpg\\gamemusic.wav");
+    //    gamemusic.load();
+    //    gamemusic.playlooping();
+    //}
     do
     {
         RoomLoader(Screens.roomString);

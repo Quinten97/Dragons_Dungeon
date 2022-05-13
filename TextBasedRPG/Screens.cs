@@ -330,8 +330,10 @@ namespace TextBasedRPG
             Functions.DrawUI();
             Console.SetCursorPosition(10, 5);
             Console.WriteLine("(S)earch Room");
-            Console.SetCursorPosition(20, 6);
+            Console.SetCursorPosition(10, 6);
             Console.WriteLine("(F)ight");
+            Console.SetCursorPosition(10, 7);
+            Console.WriteLine("(N)ext Room");
 
 
             ConsoleKeyInfo keyInfo;
@@ -381,10 +383,90 @@ namespace TextBasedRPG
                             Environment.Exit(-1);
                             break;
                         }
+                    case ConsoleKey.N:
+                        {
+                            roomString = "room-2-A";
+                            loopExit = false;
+                            break;
+                        }
                 }
             }
             while (loopExit == true);
 
         }// end of RoomOneA()
+
+        public static void RoomTwoA()
+        {
+            Console.Clear();
+            Functions.combatSaveRoomString();
+            Functions.saveRoomString();
+            roomString = "";
+
+            Functions.DrawUI();
+            Console.SetCursorPosition(10, 5);
+            Console.WriteLine("(S)earch Room");
+            Console.SetCursorPosition(10, 6);
+            Console.WriteLine("(F)ight");
+            Console.SetCursorPosition(10, 7);
+            Console.WriteLine("This is a new room");
+
+
+            ConsoleKeyInfo keyInfo;
+            bool loopBreak = true;
+            do
+            {
+
+                keyInfo = Console.ReadKey();
+
+                switch (keyInfo.Key)
+                {
+                    case ConsoleKey.S:
+                        {
+                            if (RoomOneAItem == true)
+                            {
+                                Console.SetCursorPosition(20, 10);
+                                Console.WriteLine("You found a health potion");
+                                Player.consumables.Add(Items.healthPotion);
+                                Player.keys.Add(Keys.Key1);
+                                Items.healthPotion[3] = +1;
+                                RoomOneAItem = false;
+                            }
+                            else
+                            {
+                                Console.SetCursorPosition(20, 10);
+                                Console.WriteLine("you find nothing else in this room");
+                            }
+                            break;
+                        }
+                    case ConsoleKey.F:
+                        {
+                            Combat.selectEnemy(Enemies.orc);
+                            roomString = "combat";
+                            Screens.savedRoomString = "combat";
+                            loopBreak = false;
+                            break;
+                        }
+                    case ConsoleKey.I:
+                        {
+                            roomString = "inventory";
+                            loopBreak = false;
+                            break;
+                        }
+                    case ConsoleKey.E:
+                        {
+                            Environment.Exit(-1);
+                            break;
+                        }
+                    case ConsoleKey.N:
+                        {
+                            roomString = "room-1-A";
+                            loopBreak = false;
+                            break;
+                        }
+                }
+            } 
+            while (loopBreak == true);
+
+        }// end of RoomTwoA()
     }
 }

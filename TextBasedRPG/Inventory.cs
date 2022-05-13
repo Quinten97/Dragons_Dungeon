@@ -313,7 +313,6 @@ namespace TextBasedRPG
                         {
                                 Screens.roomString = Screens.savedRoomString;
                                 loopBreak = false;
-                            Combat.loopBreak = true;
                                 break;
                         }
                 }
